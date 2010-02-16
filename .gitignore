@@ -1,0 +1,6 @@
+# Build dir
+*/build
+
+# X-Code User files
+*.pbxuser
+*.mode1v3

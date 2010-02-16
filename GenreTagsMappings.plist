@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>genre</key>
+		<string>classical</string>
+		<key>tags</key>
+		<array>
+			<string>classical</string>
+			<string>classic</string>
+			<string>piano</string>
+			<string>opera</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>jazz</string>
+		<key>tags</key>
+		<array>
+			<string>jazz</string>
+			<string>gospel</string>
+			<string>blues</string>
+			<string>swing</string>
+			<string>vocal jazz</string>
+			<string>jazz piano</string>
+			<string>new jazz</string>
+			<string>nu jazz</string>
+			<string>nujazz</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>funk</string>
+		<key>tags</key>
+		<array>
+			<string>funk</string>
+			<string>soul</string>
+			<string>disco</string>
+			<string>bossa nova</string>
+			<string>ska</string>
+			<string>reggae</string>
+			<string>roots reggae</string>
+			<string>world</string>
+			<string>worldmusic</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>hip-hop</string>
+		<key>tags</key>
+		<array>
+			<string>hip-hop</string>
+			<string>hip hop</string>
+			<string>hiphop</string>
+			<string>rap</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>electronic</string>
+		<key>tags</key>
+		<array>
+			<string>electronic</string>
+			<string>electronica</string>
+			<string>electro</string>
+			<string>electropop</string>
+			<string>house</string>
+			<string>minimal house</string>
+			<string>minimalistic house</string>
+			<string>electro house</string>
+			<string>electrohouse</string>
+			<string>electroclash</string>
+			<string>idm</string>
+			<string>trance</string>
+			<string>dance</string>
+			<string>club</string>
+			<string>techno</string>
+			<string>minimal techno</string>
+			<string>minimal</string>
+			<string>downtempo</string>
+			<string>down beat</string>
+			<string>downbeat</string>
+			<string>dub</string>
+			<string>chillout</string>
+			<string>trip-hop</string>
+			<string>drum n bass</string>
+			<string>dnb</string>
+			<string>drum&apos;n&apos;bass</string>
+			<string>drum and bass</string>
+			<string>drumandbass</string>
+			<string>jungle</string>
+			<string>dubstep</string>
+			<string>2step</string>
+			<string>breakbeat</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>rock</string>
+		<key>tags</key>
+		<array>
+			<string>rock</string>
+			<string>classic rock</string>
+			<string>hard rock</string>
+			<string>indie</string>
+			<string>indie rock</string>
+			<string>punk</string>
+			<string>progressive rock</string>
+			<string>alternative</string>
+			<string>alternative rock</string>
+			<string>post-rock</string>
+			<string>post rock</string>
+			<string>piano rock</string>
+			<string>country</string>
+			<string>rockabilly</string>
+			<string>folk</string>
+			<string>new wave</string>
+			<string>synth pop</string>
+			<string>synthpop</string>
+			<string>singer-songwriter</string>
+			<string>singersongwriter</string>
+			<string>singer songwriter</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>metal</string>
+		<key>tags</key>
+		<array>
+			<string>metal</string>
+			<string>heavy metal</string>
+			<string>death metal</string>
+			<string>alternative metal</string>
+		</array>
+	</dict>
+</array>
+</plist>
