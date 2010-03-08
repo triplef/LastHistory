@@ -30,7 +30,7 @@
 
 @synthesize busy=_busy;
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+- (void)applicationWillFinishLaunching:(NSNotification *)aNotification
 {
 	_launchDate = [NSDate date];
 	
@@ -123,13 +123,16 @@
 
 - (IBAction)showWelcomeWindow:(id)sender
 {
-	NSMenu *recentMenu = [self recentDocumentsMenu];
-	[recentDocumentsButton setHidden:(recentMenu == nil)];
-	if (recentMenu)
-		[recentDocumentsButton setMenu:recentMenu];
-	
-	[welcomeWindow center];
-	[welcomeWindow makeKeyAndOrderFront:nil];
+	if (![welcomeWindow isVisible])
+	{
+		NSMenu *recentMenu = [self recentDocumentsMenu];
+		[recentDocumentsButton setHidden:(recentMenu == nil)];
+		if (recentMenu)
+			[recentDocumentsButton setMenu:recentMenu];
+
+		[welcomeWindow center];
+		[welcomeWindow makeKeyAndOrderFront:nil];
+	}
 }
 
 - (IBAction)closeWelcomeWindow:(id)sender
@@ -170,6 +173,10 @@ fail:
 
 - (void)documentWillOpen:(NSNotification *)sender
 {
+	NSArray *documents = [[NSDocumentController sharedDocumentController] documents];
+	if ([documents count] == 0)
+		[self showWelcomeWindow:nil];
+	
 	self.busy = YES;
 }
 
