@@ -10,6 +10,8 @@ LastHistory can be used in one of two modes, each of which is optimized for a di
 * **Personal Mode**  
   This mode adapts the visualization shown in Analysis mode for exploring your own past: by adding photos from your iPhoto library and calendar entries from iCal to the visualization, you can reminisce about your past by listening to the top tracks from your last vacation while watching a slide show of the corresponding photos. Or you can find the most influential tracks that you listened to most during a specific timeframe by inspecting the highlighted tracks in the visualization.
 
+Join the [LastHistory user group](http://www.last.fm/group/LastHistory+Users) on Last.fm to discuss the application with other users and to share your insights and feedback.
+
 System Requirements
 -------------------
 Mac OS X v10.5 or later. Intel processor with 2.2 GHz or more and 256 MB VRAM or more recommended.  
