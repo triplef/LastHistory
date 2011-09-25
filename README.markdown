@@ -23,5 +23,5 @@ LastHistory is written in Objective-C/Cocoa with extensive use of Apple's [Core 
 
 License
 -------
-© 2010 Frederik Seiffert, <ego@frederikseiffert.de>.  
+© 2010-2011 Frederik Seiffert, <ego@frederikseiffert.de>.  
 LastHistory is licensed under a [Creative Commons GNU General Public License License](http://creativecommons.org/licenses/GPL/2.0/).
