@@ -124,7 +124,7 @@
 - (void)setupLayer
 {
 	self.anchorPoint = CGPointMake(0, 0); // lower-left corner
-	self.bounds = CGRectMake(0, 0, self.superlayer.bounds.size.width, 1.0);
+	self.bounds = CGRectMake(0, 0, 1.0, 1.0);
 	
 	[self.view addObserver:self forKeyPath:@"showHistoryEntryWeights" options:0 context:NULL];
 	[self.view addObserver:self forKeyPath:@"nodeScaleFactor" options:0 context:NULL];
