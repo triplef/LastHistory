@@ -27,23 +27,32 @@
 	if (self != nil) {
 		_document = document;
 		
-		// setup managed object context
+		[self addObserver:self forKeyPath:@"isExecuting" options:0 context:NULL];
+		[self addObserver:self forKeyPath:@"isFinished" options:0 context:NULL];
+		
+		self.progressIndeterminate = YES;
+	}
+	return self;
+}
+
+- (NSManagedObjectContext *)context
+{
+	if (!_context)
+	{
+		// setup managed object context (note: this needs to happen on processing thread!)
+		NSAssert(![NSThread isMainThread], @"NSOperation MOC created on main thread");
+		
 		_context = [[NSManagedObjectContext alloc] init];
 		[_context setPersistentStoreCoordinator:[[self.document managedObjectContext] persistentStoreCoordinator]];
 		[_context setUndoManager:nil];
-		
-		
-		[self addObserver:self forKeyPath:@"isExecuting" options:0 context:NULL];
-		[self addObserver:self forKeyPath:@"isFinished" options:0 context:NULL];
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self
 												 selector:@selector(contextDidChange:)
 													 name:NSManagedObjectContextDidSaveNotification
 												   object:_context];
-		
-		self.progressIndeterminate = YES;
 	}
-	return self;
+	
+	return _context;
 }
 
 - (void)finalize

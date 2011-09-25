@@ -22,17 +22,13 @@
 
 @implementation LHHistoryRetrievalOperation
 
+@synthesize username=_username;
+
 - (id)initWithDocument:(LHDocument *)document andUsername:(NSString *)username
 {
 	self = [super initWithDocument:document];
 	if (self != nil) {
-		// fetch or create user
-		LHUser *user = [[LHUser fetchUsersWithName:self.context name:username] lastObject];
-		if (!user) {
-			user = [LHUser insertInManagedObjectContext:self.context];
-			user.name = username;
-		}
-		_user = user;
+		_username = username;
 	}
 	return self;
 }
@@ -120,12 +116,20 @@
 
 - (void)process
 {
-	NSAssert(_user, @"No user given");
+	NSAssert(_username, @"No username given");
+	
+	self.progressMessage = [NSString stringWithFormat:@"Retrieving listening history for %@...", self.username];
 	
 	NSManagedObjectContext *context = self.context;
-	_lastHistoryEntry = self.document.lastHistoryEntry;
 	
-	self.progressMessage = [NSString stringWithFormat:@"Retrieving listening history for %@...", _user.name];
+	// fetch or create user
+	LHUser *user = [[LHUser fetchUsersWithName:context name:self.username] lastObject];
+	if (!user) {
+		user = [LHUser insertInManagedObjectContext:context];
+		user.name = self.username;
+	}
+	_user = user;
+	_lastHistoryEntry = self.document.lastHistoryEntry;
 	
 	// cache entity descriptions for faster inserting
 	_historyEntryEntity = [NSEntityDescription entityForName:@"HistoryEntry" inManagedObjectContext:context];

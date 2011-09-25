@@ -15,6 +15,7 @@
 
 
 @interface LHHistoryRetrievalOperation : LHOperation {
+	NSString *_username;
 	LHUser *_user;
 	
 	LHHistoryEntry *_firstHistoryEntry;
@@ -27,5 +28,7 @@
 }
 
 - (id)initWithDocument:(LHDocument *)document andUsername:(NSString *)username;
+
+@property (readonly) NSString *username;
 
 @end
